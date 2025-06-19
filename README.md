@@ -6,7 +6,7 @@
 
 ## tools used
 
-- frontend: HTML, CSS, JavaScript
+- frontend: HTML, JavaScript, CSS
 - API simulation: JavaScript mock database with CRUD operations
 
 ## goal(s): why did I build this?
