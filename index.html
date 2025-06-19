@@ -1,0 +1,160 @@
+<!---
+===============
+author = tzolic
+===============
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTful API interactive tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 RESTful API Interactive Tutorial</h1>
+            <p>Interactive demonstration of REST API concepts and HTTP methods</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>📚 REST API Concepts</h2>
+            <div class="concepts">
+                <div class="concept-card">
+                    <h3>What is REST?</h3>
+                    <p>REST (Representational State Transfer) is an architectural style for designing networked applications. It uses standard HTTP methods and is stateless, meaning each request contains all information needed to process it.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>HTTP Methods</h3>
+                    <p><strong>GET:</strong> Retrieve data<br>
+                    <strong>POST:</strong> Create new data<br>
+                    <strong>PUT:</strong> Update existing data<br>
+                    <strong>DELETE:</strong> Remove data</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Status Codes</h3>
+                    <p><strong>200:</strong> Success<br>
+                    <strong>201:</strong> Created<br>
+                    <strong>404:</strong> Not Found<br>
+                    <strong>500:</strong> Server Error</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🛠️ Interactive API Demo</h2>
+            <p>Try out different HTTP methods with our mock API. This simulates real API behavior!</p>
+
+            <div class="api-endpoint">
+                <span class="method get">GET</span>
+                <strong>/api/users</strong> - Get all users
+                <button class="try-button" onclick="getUsers()">Try GET</button>
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method get">GET</span>
+                <strong>/api/users/{id}</strong> - Get user by ID
+                <div class="input-group">
+                    <label>User ID:</label>
+                    <input type="number" id="getUserId" placeholder="Enter user ID" min="1">
+                </div>
+                <button class="try-button" onclick="getUserById()">Try GET by ID</button>
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method post">POST</span>
+                <strong>/api/users</strong> - Create new user
+                <div class="input-group">
+                    <label>Name:</label>
+                    <input type="text" id="newUserName" placeholder="Enter user name">
+                </div>
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="email" id="newUserEmail" placeholder="Enter user email">
+                </div>
+                <button class="try-button" onclick="createUser()">Try POST</button>
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method put">PUT</span>
+                <strong>/api/users/{id}</strong> - Update user
+                <div class="input-group">
+                    <label>User ID to update:</label>
+                    <input type="number" id="updateUserId" placeholder="Enter user ID" min="1">
+                </div>
+                <div class="input-group">
+                    <label>New Name:</label>
+                    <input type="text" id="updateUserName" placeholder="Enter new name">
+                </div>
+                <button class="try-button" onclick="updateUser()">Try PUT</button>
+            </div>
+
+            <div class="api-endpoint">
+                <span class="method delete">DELETE</span>
+                <strong>/api/users/{id}</strong> - Delete user
+                <div class="input-group">
+                    <label>User ID to delete:</label>
+                    <input type="number" id="deleteUserId" placeholder="Enter user ID" min="1">
+                </div>
+                <button class="try-button" onclick="deleteUser()">Try DELETE</button>
+            </div>
+
+
+        </div>
+
+        <div class="demo-section">
+            <h2>💻 Code Examples</h2>
+            <h3>JavaScript Fetch API:</h3>
+            <div class="response-area">
+// GET request
+fetch('/api/users')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// POST request  
+fetch('/api/users', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name: 'John', email: 'john@example.com' })
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+            </div>
+
+            <h3>cURL Examples:</h3>
+            <div class="response-area">
+# GET all users
+curl -X GET https://api.example.com/users
+
+# POST new user
+curl -X POST https://api.example.com/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"John","email":"john@example.com"}'
+
+# PUT update user
+curl -X PUT https://api.example.com/users/1 \
+  -H "Content-Type: application/json" \  
+  -d '{"name":"John Updated"}'
+
+# DELETE user
+curl -X DELETE https://api.example.com/users/1
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed API Response Area -->
+    <div class="fixed-response-area" id="responseArea">
+        <div class="response-header">📱 API Response Monitor</div>
+        👆 Click any "Try" button above to see API responses here!
+        
+Ready to test REST API calls...
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
