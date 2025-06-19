@@ -11,14 +11,14 @@
 
 ## goal(s): why did I build this?
 
-- build an interactive tool to learn and demonstrate restful api concepts
+- build an interactive tool to learn and demonstrate RESTful API concepts
 - reinforce my understanding of client-server interactions and http methods
 - help beginners visualize how api calls work in practice
 
 ## target audience(s): for who did I build this?
 
 - beginners learning web development or backend programming
-- students studying restful api architecture
+- students studying RESTful API architecture
 - anyone interested in understanding http methods through hands-on practice
 
 ## key features
