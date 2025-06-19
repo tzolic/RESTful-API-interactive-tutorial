@@ -30,7 +30,7 @@
 
 ### click here: {link}
 
-## tools Used
+## tools used
 
 - frontend: HTML, CSS, JavaScript
 - API simulation: JavaScript mock database with CRUD operations
