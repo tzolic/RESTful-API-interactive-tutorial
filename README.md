@@ -28,7 +28,7 @@
 
 ## view project
 
-### click here: {link}
+### click here: https://restful-api-interactive-tutorial.netlify.app/
 
 ## tools used
 
