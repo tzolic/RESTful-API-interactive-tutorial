@@ -1,31 +1,5 @@
 # RESTful API interactive tutorial: an interactive web tutorial to learn and practice RESTful API basics
 
-## preview
-
-| homepage                  |
-| ------------------------- |
-| <img src="readme/1.png"/> |
-
-| GET                       |
-| ------------------------- |
-| <img src="readme/2.png"/> |
-
-| POST                      |
-| ------------------------- |
-| <img src="readme/3.png"/> |
-
-| PUT, DELETE               |
-| ------------------------- |
-| <img src="readme/4.png"/> |
-
-| code examples             |
-| ------------------------- |
-| <img src="readme/5.png"/> |
-
-| API response monitor      |
-| ------------------------- |
-| <img src="readme/6.png"/> |
-
 ## view project
 
 ### click here: https://restful-api-interactive-tutorial.netlify.app/
